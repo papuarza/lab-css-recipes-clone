@@ -9,12 +9,18 @@
 	margin: auto;
 }
 
-ul li {
+ul li, ol li {
 	list-style-type: none;
 }
 
 ul li:before {
 	content: "- ";
+}
+
+
+ol li:before {
+	counter-increment: section;
+	content: "" counter(section) ') ';
 }
 
 
@@ -91,5 +97,6 @@ h2 {
 
 body {
 	margin-bottom: 30px;
+	counter-reset: section;
 }
 
